@@ -6,6 +6,7 @@ import projectRoutes from './routes/projectRoutes.js';
 import educationRoutes from './routes/educationRoutes.js';
 import skillRoutes from './routes/skillRoutes.js';
 import experienceRoutes from './routes/experienceRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 dotenv.config();
 connectDB();
@@ -18,6 +19,7 @@ app.use('/api/education', educationRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/skills', skillRoutes);
 app.use('/api/experience', experienceRoutes);
+app.use('/api/auth', authRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
